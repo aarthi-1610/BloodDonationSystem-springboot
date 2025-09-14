@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Edit Donor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Edit Donor</h2>
+
+    <form th:action="@{/donors/update/{id}(id=${donor.id})}" th:object="${donor}" method="post" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" th:field="*{name}" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Blood Group:</label>
+            <input type="text" th:field="*{bloodGroup}" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age:</label>
+            <input type="number" th:field="*{age}" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City:</label>
+            <input type="text" th:field="*{city}" class="form-control" required/>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Update Donor</button>
+            <a href="/donors" class="btn btn-warning">Cancel</a>
+        </div>
+    </form>
+
+    <!-- Back to Home Button -->
+    <div class="mt-4 text-center">
+        <a class="btn btn-success" th:href="@{/}">🏠 Back to Home</a>
+    </div>
+</div>
+</body>
+</html>

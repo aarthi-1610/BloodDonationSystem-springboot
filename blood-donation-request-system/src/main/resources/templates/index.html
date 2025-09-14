@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation System</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-weight: bold;
+            color: #b30000; /* dark red */
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: #b30000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="container hero">
+    <h1 class="display-4">💉 Blood Donation Management System</h1>
+    <p class="lead">Save lives by managing blood donors efficiently</p>
+
+    <div>
+        <a href="/donors" class="btn btn-primary btn-custom m-2">🔎 View Donors</a>
+        <a href="/donors/new" class="btn btn-success btn-custom m-2">➕ Add New Donor</a>
+        <a href="/receivers/new" class="btn btn-danger btn-custom m-2">🩸 Request Blood</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Blood Donation System | Designed with ❤️ by <b>Aarthi</b></p>
+</footer>
+
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
